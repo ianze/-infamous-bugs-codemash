@@ -1,0 +1,318 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>THE STORIES OF THE MOST INFAMOUS BUGS</title>
+
+    <link rel="stylesheet" href="css/reveal.css">
+    <link rel="stylesheet" href="css/theme/sky.css">
+
+</head>
+<body>
+<div class="reveal">
+    <div class="slides">
+        <section>
+                <h3>Ian Zelikman</h3>
+                <ul>
+                    <li>Python dev for 6+ years</li>
+                    <li>Backend web services</li>
+                    <li>IBM Watson Health</li>
+                    <p>
+                        @izcoder<br/>
+                        ian.zelikman@gmail
+                    </p>
+                </ul>
+        </section>
+        <section>
+            <h1>Motivation</h1>
+            <aside class="notes">
+Wanted to give this talk for a while<br><br>
+
+Inspire you to learn from these famous bugs<br><br>
+
+Limited learning from bugs in our organizations<br><br>
+            </aside>
+        </section>
+        <section>
+            <h2>Bug Etymology and History</h2>
+
+            <img class="stretch" style="..." src="img/thomas_edison_letter.jpg">
+            <aside class="notes">
+bugge, bugbear and bugaboo - origins of the word bug and describe a monster<br>
+
+Thomas Edison - mechanical malfunction, 1878. Early adaptor but not first one.<br><
+
+Military gear during world war II<br>
+
+Isac Asimov 1944  - Catch That Rabbit<br>
+            </aside>
+        </section>
+        <section>
+            <h2>First Bug In Software</h2>
+            <img class="stretch" style="height: 609px; width: 512.77px;" src="img/first_bug.jpg">
+            <aside class="notes">
+September 9 1947 MARK II computer at Harvard University<br>
+
+Moth<br>
+
+Grace Hopper<br>
+
+Stored at National Museum of American History of the Smithsonian Institution.
+            </aside>
+        </section>
+        <section>
+            <h1>Infamous Bugs</h1>
+        </section>
+        <section>
+            <section>
+                <h1>Mars Climate Orbiter</h1>
+                <img class="stretch" style="..." src="img/mars_surveyor.png">
+                <aside class="notes">
+Space bugs are quite interesting and also have a big impact.<br>
+
+Launched in 1998.<br>
+
+Collect climate info. Water distribution.<br>
+
+past climate change.<br>
+                </aside>
+            </section>
+            <section>
+                <h2>Loss Of Contact</h2>
+                <img width="400" style="..." src="img/orbiter_trajectory.png">
+                <img width="400" style="..." src="img/orbit.png">
+                <aside class="notes">
+Using different units. One scientific and one US.<br>
+
+Wrong altitude and angle for the last orbiting maneuvers.<br>
+                </aside>
+            </section>
+            <section>
+            <h2>The Result</h2>
+            <img width="400" style="..." src="img/mars_orbiter_assembly.jpg">
+            <img width="400" style="..." src="img/mars_orbiter_assembly_2.jpg">
+            <aside class="notes">
+Total Cost: $327.6M<br>
+4 years of research and development<br>
+            </aside>
+        </section>
+            <section>
+                <h2>Why This Bug</h2>
+                <img class="stretch" style="..." src="img/bug_1.jpg">
+                <aside class="notes">
+Specification and E2E tests<br>
+Bug Report Procedures<br>
+                </aside>
+            </section>
+        </section>
+        <section>
+            <section>
+                <h2>Ariane 5 Explosion</h2>
+                <img class="stretch" style="..." src="img/ariane_5_explosion.png">
+                <aside class="notes">
+Cluster (4) satellites, to study solar radiation on earth's magnetic field.<br>
+June 4th 1996 - 40 seconds into launch.<br>
+                </aside>
+            </section>
+            <section>
+                <h2>Overflow</h2>
+                <img class="stretch" style="..." src="img/ariane5_code.png">
+                <aside class="notes">
+A very unique set of events caused the error.<br>
+
+Countdown postponed and resumed too fast.<br><br>
+
+Diagnosis subroutine running during flight. Overflow due to high altitude.<br>
+4 out of 7 variables protected from overflow<br>
+                </aside>
+            </section>
+            <section>
+                <h2>The Results</h2>
+                <img class="stretch" style="..." src="img/launch_stats.png">
+                <aside class="notes">
+Hurt ESA reputation for successful launches - 2007<br>
+Total Cost of $370M (rocket and cluster satellites)<br>
+Setback of years for the cluster mission<br><br>
+
+Large scale static analysis.<br>
+                </aside>
+            </section>
+            <section>
+                <h2>Why This Bug</h2>
+                <img class="stretch" style="..." src="img/bug_2.jpg">
+                <aside class="notes">
+Reuse of a software package<br><br>
+Overflow<br><br>
+Exception handling<br><br>
+                </aside>
+            </section>
+        </section>
+        <section>
+            <section>
+                <h2>AT&T Long Distance</h2>
+                <img class="stretch" style="..." src="img/alexander_bell_new_york_chicago.jpg">
+                <aside class="notes">
+Alexander bell placing the first call between new york and chicago.<br>
+
+January 15 1990 no long distance phone calls at AT&T<br>
+
+9 hours engineers working with law enforcement<br>
+                </aside>
+            </section>
+            <section class="center">
+                <h2>Call Waiting...</h2>
+                <img class="stretch" style="..." src="img/4ESS.jpg">
+                <aside class="notes">
+Failure at one switch<br>
+
+Another switch was reset for new configuration.<br>
+
+Messages sent too fast<br>
+                </aside>
+            </section>
+            <section>
+                <h2>The Results</h2>
+                <img class="stretch" style="..." src="img/att_logo.jpeg">
+                <aside class="notes">
+$60M in long distance calls<br>
+9 hours outage time<br>
+75M phone calls<br>
+200,000 airline reservations<br>
+Brand/PR damage<br>
+                </aside>
+            </section>
+            <section>
+                <h2>Why This Bug</h2>
+                <img class="stretch" style="..." src="img/bug_3.jpg">
+                <aside class="notes">
+Improving component performance can lead to adverse effect<br>
+Consider each change on the whole system<br>
+                </aside>
+            </section>
+        </section>
+        <section>
+            <section>
+                <h2>Patriot System Failure</h2>
+                <img class="stretch" style="..." src="img/patriot_system.jpg">
+                <aside class="notes">
+Patriot used since the 60s. 90s first time against scud misses.<br>
+
+On February 25th 1991 a scud missile that has been fired at a US Air base in dhahrhan.<br>
+
+The system detected the missles but there was no intercept<br>
+                </aside>
+            </section>
+            <section>
+                <h2>Failure At Dahhran</h2>
+                <img width="300" style="..." src="img/patriot_calculation_correct.png">
+                <img width="300" style="..." src="img/patriot_calculation_20_shift.png">
+                <img width="300" style="..." src="img/patriot_calculation_incorrect.png">
+                <aside class="notes">
+Converting time to 24 bit integer. Lost precesion. Only one method protected<br>
+
+Drift caused missle not to be detected<br>
+
+More time the system is in operation the bigger the drift.<br>
+
+This system 100 hours, 8 hours - 20%. 20 hours - unusable <br>
+                </aside>
+            </section>
+            <section>
+                <h2>The Results</h2>
+                <img class="stretch" style="..." src="img/strike_impact.jpeg">
+                <aside class="notes">
+28 killed<br>
+110 injured<br>
+Mainly reserve duty personal from Pennsylvania.<br>
+                </aside>
+            </section>
+            <section>
+                <h2>Why This Bug</h2>
+                <img class="stretch" style="..." src="img/bug_4.jpg">
+                <aside class="notes">
+The issue reported but not prioritized<br>
+A gap between how the system is used and how it was assumed to be used<br>
+A fix has shipped and was delivered to the base the next day<br>
+                </aside>
+            </section>
+        </section>
+        <section>
+            <section>
+                <h2>World End 1983</h2>
+                <img class="stretch" style="..." src="img/war_games_1983.jpg">
+                <aside class="notes">
+Movie war games. 3 months before this incident<br>
+
+September 26th 1983, alert of 5 incoming missiles.<br>
+
+Lt. Colonel Stanislaus Petrov<br>
+                </aside>
+            </section>
+            <section>
+                <h2>False Alarm</h2>
+                <img class="stretch" style="..." src="img/sun_clouds.jpg">
+                <aside class="notes">
+It is hard to find information about the actual fail.<br>
+
+Wide coverage of clouds - sun rays reflected into IR sensors<br>
+
+Probably first time for this set of conditions
+                </aside>
+            </section>
+            <section>
+                <h2>The Result</h2>
+                <img class="stretch" style="..." src="img/atom_blast.jpg">
+                <aside class="notes">
+The world didn't end. Explosion like this did not happen.<br>
+
+Less confidence in the system by Russian leader<br>
+                </aside>
+            </section>
+            <section>
+                <h2>Why This Bug</h2>
+                <img class="stretch" style="..." src="img/bug_5.jpg">
+                <aside class="notes">
+Edge Case<br>
+Human Intervention - no proof this is false alarm. Hunch more rockets will be fired.<br>
+                </aside>
+            </section>
+        </section>
+        <section>
+            <h2>Famous Bugs</h2>
+            <ul>
+                <li>What is common to these cases?</li>
+                <li>Why are they important?</li>
+            </ul>
+            <aside class="notes">
+                Common: more E2E testing, edge cases (unique circumstances).<br>
+                Important: Learn from other people mistakes.<br>
+            </aside>
+        </section>
+    </div>
+</div>
+
+<script src="lib/js/head.min.js"></script>
+<script src="js/reveal.js"></script>
+
+<script>
+    // More info https://github.com/hakimel/reveal.js#configuration
+    Reveal.initialize({
+        history: true,
+
+        // More info https://github.com/hakimel/reveal.js#dependencies
+        dependencies: [
+            {src: 'plugin/markdown/marked.js'},
+            {src: 'plugin/markdown/markdown.js'},
+            {src: 'plugin/notes/notes.js', async: true},
+            {
+                src: 'plugin/highlight/highlight.js', async: true, callback: function () {
+                    hljs.initHighlightingOnLoad();
+                }
+            }
+        ]
+    });
+</script>
+</body>
+</html>
