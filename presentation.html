@@ -14,23 +14,25 @@
 <div class="reveal">
     <div class="slides">
         <section>
-                <h3>Ian Zelikman</h3>
-                <ul>
-                    <li>Python dev for 6+ years</li>
-                    <li>Backend web services</li>
-                    <li>IBM Watson Health</li>
-                    <p>
-                        @izcoder<br/>
-                        ian.zelikman@gmail
-                    </p>
-                </ul>
+                <h2>THE STORIES OF THE MOST INFAMOUS BUGS</h2>
+                <h4>Ian Zelikman</h4>
+            <br>
+                <p>
+                    @izcoder<br/>
+                    ian.zelikman@gmail.com
+                </p>
+            <aside class="notes">
+Python dev for 6+ years<br>
+Backend web services<br>
+IBM Watson Health<br>
+            </aside>
         </section>
         <section>
             <h1>Motivation</h1>
             <aside class="notes">
 Wanted to give this talk for a while<br><br>
 
-Inspire you to learn from these famous bugs<br><br>
+Learn more about these bugs and inspire you to learn from these famous bugs<br><br>
 
 Limited learning from bugs in our organizations<br><br>
             </aside>
@@ -57,7 +59,7 @@ September 9 1947 MARK II computer at Harvard University<br>
 
 Moth<br>
 
-Grace Hopper<br>
+Grace Hopper - terminology used today<br>
 
 Stored at National Museum of American History of the Smithsonian Institution.
             </aside>
@@ -84,7 +86,7 @@ past climate change.<br>
                 <img width="400" style="..." src="img/orbiter_trajectory.png">
                 <img width="400" style="..." src="img/orbit.png">
                 <aside class="notes">
-Using different units. One scientific and one US.<br>
+ Lokheed Martin - Thrusters(US). Nasa - Ground unit(Metric) <br>
 
 Wrong altitude and angle for the last orbiting maneuvers.<br>
                 </aside>
@@ -122,7 +124,8 @@ June 4th 1996 - 40 seconds into launch.<br>
                 <aside class="notes">
 A very unique set of events caused the error.<br>
 
-Countdown postponed and resumed too fast.<br><br>
+Countdown postponed and resumed too fast. IRS - inertial reference system<br>
+64-bit floating point number to a 16-bit signed integer<br>
 
 Diagnosis subroutine running during flight. Overflow due to high altitude.<br>
 4 out of 7 variables protected from overflow<br>
@@ -165,11 +168,11 @@ January 15 1990 no long distance phone calls at AT&T<br>
                 <h2>Call Waiting...</h2>
                 <img class="stretch" style="..." src="img/4ESS.jpg">
                 <aside class="notes">
-Failure at one switch<br>
+First switch (in NY) congested. <br>
 
-Another switch was reset for new configuration.<br>
+Another switch was reset for new configuration. <br>
 
-Messages sent too fast<br>
+The two messages from first switch came too fast<br>
                 </aside>
             </section>
             <section>
@@ -210,11 +213,11 @@ The system detected the missles but there was no intercept<br>
                 <img width="300" style="..." src="img/patriot_calculation_20_shift.png">
                 <img width="300" style="..." src="img/patriot_calculation_incorrect.png">
                 <aside class="notes">
-Converting time to 24 bit integer. Lost precesion. Only one method protected<br>
+Time stamp truncation in a 24-bit fixed-point register. Lost precision. Only one of the radar pulses timestamp was protected<br>
 
-Drift caused missle not to be detected<br>
+Drift caused missile not to be detected<br>
 
-More time the system is in operation the bigger the drift.<br>
+Drift between the two clocks was proportional to the time the system in operation<br>
 
 This system 100 hours, 8 hours - 20%. 20 hours - unusable <br>
                 </aside>
@@ -280,11 +283,7 @@ Human Intervention - no proof this is false alarm. Hunch more rockets will be fi
             </section>
         </section>
         <section>
-            <h2>Famous Bugs</h2>
-            <ul>
-                <li>What is common to these cases?</li>
-                <li>Why are they important?</li>
-            </ul>
+            <h3>How Not To Create A Famous Bug</h3>
             <aside class="notes">
                 Common: more E2E testing, edge cases (unique circumstances).<br>
                 Important: Learn from other people mistakes.<br>
